@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+	<title>Duncan Art</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+   <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/ css/font-awesome.min.css"> -->
+   <!--  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"> -->
+   <!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="assets/js/duncan.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/cycle2.js"></script>
+   
+<!--  50 pic  -->
+<!-- arrow clich to inlarge -->
+</head>
+<body>
+  <!-- <div id="mega_cont"> -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+  	 <div class = "container">
+
+   <!--   <div id="artist_Name">
+       
+     </div>
+ -->
+     <div class="navbar-header"> 
+  	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><h2 id="header_Name">Duncan Williamson</h2></a>
+      </div>
+       <div class="navbar-collapse collapse"> 
+  	    <ul id="trans-nav" class="nav navbar-nav navbar-right">
+  	  	 <li class="nav_Bar"><a href="#">Home</a></li>
+         <li class="nav_Bar"><a href="#">Contact</a></li>
+  	  	 <li class="nav_Bar"><a href="#">Portfolios</a>
+  	  	  <ul>
+  	  	  	<li><a href="#British_Isles">Landscapes of British Isles</a></li>
+            <li><a href="#Texas">Lanscapes of Texas</a></li>
+            <li><a href="#Louisiana">Lanscapes of Louisiana</a></li>
+            <li><a href="#Waterscapes_Sirens">Waterscapes and Sirens</a></li>
+  	  	  </ul>
+  	  	 </li>
+  	  	</ul>
+       </div>
+  	 
+    </div>
+   </div>
+  <div id="page1">
+  <a id="about" class="smooth"></a>
+    About page content goes here.
+</div>
+ 
+<div id="page2">
+  <a id="portfolio" class="smooth"></a>
+    Portfolio page content goes here.
+</div>
+ 
+<div id="page3">
+  <a id="contact" class="smooth"></a>
+    Contact page content goes here.
+</div>
+
+<div id="first_slideShow">
+   <a id="British_Isles" class="smooth"></a>
+   <div class="slideShow_container">
+
+   <div id="slideshow" class="cycle-slideshow" 
+    data-cycle-fx="fade"
+    data-cycle-timeout="0"
+    data-cycle-pager-fx = "fade" 
+    data-cycle-pager = "#pager" 
+    data-cycle-carousel-visible=6
+    data-cycle-prev="#prev"
+    data-cycle-next="#next"
+    data-cycle-pager-template="<div><img src='{{src}}' width=70 height=60></div>">
+    <img src="assets/img/test.jpg" />
+    <img src="assets/img/test2.jpg" />
+    <img src="assets/img/test3.jpg" />
+    <img src="assets/img/test.jpg" />
+    <img src="assets/img/test.jpg" />
+    <img src="assets/img/test2.jpg" />
+    <img src="assets/img/test3.jpg" />
+    <img src="assets/img/test.jpg" />
+ </div>
+ <div id="pager"></div>
+  <div class=center>
+        <span id=prev>&lt;&lt;Prev </span>
+        <span id=next> Next&gt;&gt;</span>
+  </div>
+</div>
+
+
+</div>
+<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+ <script src="assets/js/bootstrap.min.js"></script>
+<script>
+function height() {
+	var h = window.innerHeight;
+	var a = document.getElementById('container');
+	a.style.height = h+"px";
+	}
+	
+window.addEventListener('load',height);
+window.addEventListener('resize',height);
+
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+// cycles when clicked event
+// $('.cycle-slideshow').on('click', function()
+// {
+// 	$('.cycle-slideshow').cycle('next');
+
+//    console.log("clicked event");
+// });
+
+
+</script>
+
+</body>
+</html>
